@@ -1,0 +1,130 @@
+.app__testimonial {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+
+.app__testimonial-item {
+  padding: 0 1rem;
+  width: 60%;
+  min-height: 200px;
+  background-color: var(--white-color);
+  display: flex;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  @media screen and (min-width: 2000px) {
+    min-height: 350px;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.app__testimonial-content {
+  height: 100%;
+  flex: 1;
+  padding: 0 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: var(--black-color);
+    font-family: var(--font-base);
+  }
+
+  h4 {
+    color: var(--secondary-color);
+    margin-top: 1rem;
+  }
+
+  h5 {
+    font-weight: 500;
+    margin-top: 5px;
+  }
+}
+
+.app__testimonial-btns {
+  margin-top: 1rem;
+
+  div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    margin: 0 1rem;
+    transition: 0.3s;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: var(--secondary-color);
+    }
+
+    &:hover {
+      background-color: var(--secondary-color);
+
+      svg {
+        color: var(--white-color);
+      }
+    }
+  }
+}
+
+.app__testimonial-brands {
+  width: 80%;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+
+  div {
+    width: 150px;
+    margin: 1.5rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      filter: grayscale(1);
+      transition: 0.3s;
+    }
+    &:hover {
+      img {
+        filter: grayscale(0);
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 220px;
+      margin: 2rem;
+    }
+    @media screen and (max-width: 800px) {
+      width: 40%;
+    }
+    @media screen and (max-width: 450px) {
+      width: 120px;
+      margin: 1rem;
+    }
+  }
+}

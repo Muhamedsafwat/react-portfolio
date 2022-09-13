@@ -1,0 +1,151 @@
+.app__navbar {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  position: fixed;
+  z-index: 2;
+}
+
+.app__navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  img {
+    width: 90px;
+
+    @media screen and (min-width: 2000px) {
+      width: 180px;
+    }
+  }
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    // styling the dot
+    div {
+      background-color: transparent;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      margin-bottom: 5px;
+      transition: 0.3s ease-in-out;
+    }
+
+    a {
+      color: var(--grey-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+      text-transform: capitalize;
+    }
+
+    &:hover {
+      div {
+        background-color: var(--secondary-color);
+      }
+      a {
+        color: var(--secondary-color);
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.app__navbar-menu {
+  //the open icon
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+
+  svg {
+    color: var(--white-color);
+    width: 75%;
+    height: 75%;
+  }
+
+  //mobile menu
+
+  div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    width: 70%;
+    height: 100vh;
+    padding: 1rem;
+    background-image: url("../../assets/bgWhite.png");
+    background-color: var(--white-color);
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    //close icon
+    svg {
+      color: var(--secondary-color);
+      width: 35px;
+      height: 35px;
+      margin: 0.5rem 1rem;
+    }
+
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      list-style: none;
+
+      li {
+        margin: 1rem;
+
+        a {
+          color: var(--grey-color);
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 1rem;
+          transition: 0.3s;
+
+          &:hover {
+            color: var(--secondary-color);
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}
