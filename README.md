@@ -1,8 +1,8 @@
 Portfolio website built with React for practice
 
-what I've learned: 
-  -framer motion
-  -sass
-  -form validation using formik and yup
-  -content management using sanity
+what I've learned: <br/>
+  -framer motion <br/>
+  -sass <br/>
+  -form validation using formik and yup <br/>
+  -content management using sanity 
   
